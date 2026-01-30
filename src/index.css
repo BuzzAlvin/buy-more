@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+}
+
+/* Emerald Green: #10B981
+
+Background
+
+White: #FFFFFF
+
+Light Gray: #F9FAFB
+
+Text
+
+Main: #111827
+
+Muted: #6B7280
+
+Accent
+Soft Gray border: #E5E7EB */

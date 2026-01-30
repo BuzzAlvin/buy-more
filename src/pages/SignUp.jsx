@@ -1,0 +1,71 @@
+import { useState } from "react";
+import Input from "../components/Input";
+import Button from "../components/Button";
+import { Link } from "react-router";
+import Footer from "../components/Footer";
+
+export default function SignUp() {
+
+    const [fullName, setFullName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+
+  return (
+    <main className="min-h-screen flex flex-col flex-1 items-center justify-center bg-gray-200 ">
+      <div className=" py-6 mt-20 shadow-xl bg-white border-gray-400 rounded-lg px-10 gap-6 w-xs sm:w-lg">
+        <h2 className="font-bold lg:text-4xl text-3xl text-center text-gray-800">
+          Sign Up
+        </h2>
+        <p className="text-center lg:text-xl text-lg text-gray-600 mt-2">
+          Create your BuyMore account
+        </p>
+
+        <form className="pt-6 flex flex-col gap-3">
+          <Input
+            label="Full Name"
+            placeholder="Enter your Full name"
+            value={fullName}
+             onChange={(e) => setFullName(e.target.value)}
+          />
+          <Input
+            label="Email"
+            placeholder="Enter your email"
+            value={email}
+             onChange={(e) => setEmail(e.target.value)}
+          />
+          <Input
+            label="Password"
+            placeholder="Enter your password"
+            type="password"
+            value={password}
+             onChange={(e) => setPassword(e.target.value)}
+          />
+          <Input
+            label="Confirm Password"
+            type="password"
+            placeholder="Confirm your password"
+            value={confirmPassword}
+             onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+          <Button variant="signIn">Sign In</Button>
+        </form>
+        <div className="flex items-center">
+          <div className="flex-1 h-px bg-gray-500"></div>
+          <span className="px-3 text-gray-500 lg:text-md text-sm"> Or continue with</span>
+          <div className="flex-1 h-px bg-gray-500"></div>
+        </div>
+        <Button variant="white">Continue with Google</Button>
+
+        <div className="mt-4 text-center lg:text-md text-sm text-gray-600">
+          Already have an account? 
+          {" "}
+          <Link to="/Login" className="text-blue-500 hover:underline">
+            Sign Up
+          </Link>
+        </div>
+      </div>
+      <Footer />
+    </main>
+  );
+}
