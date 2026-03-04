@@ -1,18 +1,16 @@
 import { useState } from "react";
-import Header from "../components/Header";
-import Input from "../components/Input";
-import Button from "../components/Button";
-import Footer from "../components/Footer";
+import Input from "../components/ui/Input";
+import Button from "../components/ui/Button";
+import Footer from "../components/layout/Footer";
 import { Link } from "react-router";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
   return (
     <main className="min-h-screen flex flex-col flex-1 items-center justify-center bg-gray-200">
-      <div className=" py-6 mt-20 shadow-xl bg-white border-gray-400 rounded-lg px-3 gap-6 w-xs sm:w-lg">
+      <div className=" py-6 mt-20 shadow-xl bg-white border-gray-400 rounded-lg px-3 gap-6 w-xs lg:mt-30 sm:w-lg">
         <h2 className="font-bold lg:text-4xl text-3xl text-center text-gray-800">
           Sign in
         </h2>
@@ -40,20 +38,25 @@ export default function Login() {
         </form>
         <div className="flex items-center">
           <div className="flex-1 h-px bg-gray-500"></div>
-          <span className="px-3 lg:text-md text-sm text-gray-500"> Or continue with</span>
+          <span className="px-3 lg:text-md text-sm text-gray-500">
+            {" "}
+            Or continue with
+          </span>
           <div className="flex-1 h-px bg-gray-500"></div>
         </div>
         <Button variant="white">Continue with Google</Button>
 
         <div className="mt-4 text-center lg:text-md text-sm text-gray-600">
-          Don't have an account?
-          {" "}
+          Don't have an account?{" "}
           <Link to="/signup" className="text-blue-500 hover:underline">
             Sign Up
           </Link>
         </div>
       </div>
       <Footer />
+      <p className="text-center text-gray-600 sm:text-sm text-xs sm:py-4 py-2">
+        Built with ❤ by Buzzalvin
+      </p>
     </main>
   );
 }
