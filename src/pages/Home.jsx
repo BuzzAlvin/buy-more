@@ -71,7 +71,7 @@ export default function Home() {
           loading="lazy"
         />
         <div className="absolute bg-black/55 inset-0 flex flex-col justify-center items-center">
-          <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4 flex flex-col items-start">
+          <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-2.5 flex flex-col items-start">
             <h2 className="font-bold text-white lg:text-4xl md:text-3xl sm:text-2xl text-lg mb-4 tracking-tight">
               Discover The Pleasures Of Shopping
             </h2>
@@ -79,7 +79,7 @@ export default function Home() {
               Explore our curated selection of high-quality products designed to
               enhance your everyday life.{" "}
             </p>
-            <div className="w-34 sm:w-46 lg:w-50">
+            <div className="w-38 sm:w-46 lg:w-50">
               <Button to="/store">Shop New Arrivals</Button>
             </div>
           </div>
